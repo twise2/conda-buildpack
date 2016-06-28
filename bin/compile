@@ -32,7 +32,7 @@ export BUILD_DIR CACHE_DIR BIN_DIR PROFILE_PATH
 source $BIN_DIR/utils
 
 # Directory Hacks for path consistiency.
-APP_DIR='/app'
+APP_DIR=$1
 TMP_APP_DIR=$CACHE_DIR/tmp_app_dir
 
 # Copy Anvil app dir to temporary storage...
