@@ -18,7 +18,7 @@ MINICONDA_URI="http://repo.continuum.io/miniconda/$MINICONDA_FILE"
 
 if [ ! -d /app/.heroku/miniconda ]; then
     puts-step "Preparing Python/Miniconda Environment (${MINICONDA_URI})"
-    curl -Os ${MINICONDA_URI}
+    curl -OsL ${MINICONDA_URI}
     bash ${MINICONDA_FILE} -p ${APP_DIR}/.heroku/miniconda/ -b | indent
     conda update conda --quiet --yes | indent
 fi
